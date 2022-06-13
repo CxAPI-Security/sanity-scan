@@ -26,15 +26,6 @@ public class UserController {
         return user;
     }
 
-    @PostMapping("/user/create/password")
-    User createUserVar(@RequestBody User user, @RequestParam(required=true) String password) {
-        System.out.println("createUserVar");
-        user.setInfo("OK");
-        System.out.println(user);
-        System.out.println("password:" + password);
-        return user;
-    }
-
     @GetMapping(value = "/user/get/byEmail/{email}")
     public User getUserByEmail(@PathVariable("email") String email) {
         System.out.println("getUserByEmail");
