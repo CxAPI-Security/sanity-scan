@@ -2,10 +2,12 @@ package com.sanity.scan.controller;
 
 import com.sanity.scan.model.User;
 import com.sanity.scan.service.IUserService;
+import com.sanity.scan.util.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -62,6 +64,12 @@ public class UserController {
     public String getUserFirstName(@PathVariable("email") String email) {
         System.out.println("getUserFirstName");
         return "LioR";
+    }
+
+    @GetMapping(value = "/user/execute/{info}")
+    public void execute(@PathVariable("info") String info) throws IOException {
+        System.out.println("execute");
+        Utils.runCommand(info);
     }
 
 
