@@ -86,7 +86,7 @@ public class ApiController {
         System.out.println("password:" + cred.getPassword());
     }
 
-    @PostMapping("/api/v1/get-user-info-with-3-risks-2-sesetive")
+    @PostMapping("/api/v1/get-user-info-with-3-risks-2-sensitive")
     UserInfo getUserInfo(@RequestBody String ssn) throws IOException {
         System.out.println("ssn: " + ssn);
         UserInfo userInfo = new UserInfo();
