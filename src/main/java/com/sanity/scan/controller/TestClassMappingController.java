@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("test/class/mapping")
-public class TestClassMappingController extends BaseTestHardCodedController {
+public class TestClassMappingController {
 
     @GetMapping("/object/primitive")
     String primitive(@RequestParam(required=true) String path) {
