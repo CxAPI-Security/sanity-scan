@@ -40,5 +40,5 @@ We created branch: master-second-scan for comparison purposes
    1. /user/create/password
 5. add risk - SQL injection. Impact API:
    1. /user/update/name
-6. change path - from /user/update to /user/updateMe
-   1. delete API - delete users/findAll
+6. change path - from /user/update to /user/updateMe 
+7. delete API - delete users/findAll
