@@ -45,6 +45,13 @@ public class UserController {
     }
 
     @PostMapping(value = "/user/updateMe")
+    public void updateUserMe(@RequestBody User user) {
+        System.out.println("updateUser");
+        System.out.println(user);
+        userService.updateUser(user);
+    }
+
+    @PostMapping(value = "/user/update")
     public void updateUser(@RequestBody User user) {
         System.out.println("updateUser");
         System.out.println(user);
