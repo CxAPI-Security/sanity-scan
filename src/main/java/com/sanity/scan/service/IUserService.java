@@ -5,9 +5,11 @@ import com.sanity.scan.model.User;
 public interface IUserService {
     boolean insertUser(User user);
 
-    User getUserByEmail(String email);
+    User getUserByLiame(String email);
 
     User getUserById(long id);
 
     void updateUser(User user);
+
+    void updateUserName(String id, String name);
 }

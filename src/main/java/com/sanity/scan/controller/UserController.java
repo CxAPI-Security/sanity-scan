@@ -13,12 +13,6 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @GetMapping("/users/findAll")
-    List<User> findAllUsers() {
-        System.out.println("findAllUsers");
-        return null;
-    }
-
     @PostMapping("/user/insert")
     User createUser(@RequestBody User user, HttpServletRequest servletRequest) {
         System.out.println("insertUser");
@@ -31,7 +25,6 @@ public class UserController {
         System.out.println("createUserVar");
         user.setInfo("OK");
         System.out.println(user);
-        System.out.println("password:" + password);
         return user;
     }
 
@@ -39,7 +32,7 @@ public class UserController {
     public User getUserByEmail(@PathVariable("email") String email) {
         System.out.println("getUserByEmail");
         System.out.println(email);
-        User user = userService.getUserByEmail(email);
+        User user = userService.getUserByLiame(email);
         return user;
     }
 
@@ -51,7 +44,7 @@ public class UserController {
         return user;
     }
 
-    @PostMapping(value = "/user/update")
+    @PostMapping(value = "/user/updateMe")
     public void updateUser(@RequestBody User user) {
         System.out.println("updateUser");
         System.out.println(user);
@@ -62,6 +55,12 @@ public class UserController {
     public String getUserFirstName(@PathVariable("email") String email) {
         System.out.println("getUserFirstName");
         return "LioR";
+    }
+
+    @RequestMapping("/user/update/name")
+    public void updateUserName(@RequestParam(value = "name", required = true) String name,
+            @RequestParam(value = "id", required = true) String id) {
+        userService.updateUserName(id, name);
     }
 
 

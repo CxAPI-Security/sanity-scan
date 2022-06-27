@@ -16,8 +16,8 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public User getUserByEmail(String email) {
-        return userDao.getUserByEmail(email);
+    public User getUserByLiame(String liame) {
+        return userDao.getUserByLiame(liame);
     }
 
     @Override
@@ -28,6 +28,11 @@ public class UserService implements IUserService {
     @Override
     public void updateUser(User user) {
         //TODO implement
+    }
+
+    @Override
+    public void updateUserName(String id, String name) {
+        userDao.updateUserName(id, name);
     }
 
 }

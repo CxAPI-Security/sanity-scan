@@ -22,16 +22,14 @@ public class UserDao implements IUserDao {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         SqlParameterSource namedParameters = new MapSqlParameterSource
                 ("password", user.getPassword())
-                .addValue("first_name", user.getFirstName())
-                .addValue("email", user.getEmail())
+                .addValue("liame", user.getLiame())
                 .addValue("info", user.getInfo());
         int update = jdbcTemplate.update(INSERT_USER, namedParameters, keyHolder, new String[]{"id"});
         user.setId(keyHolder.getKey().longValue());
         return update > 0;
     }
 
-    @Override
-    public User getUserByEmail(String email) {
+    public User getUserByLiame(String email) {
         User user = null;
         MapSqlParameterSource params = new MapSqlParameterSource();
         params.addValue("email", email);
@@ -54,5 +52,17 @@ public class UserDao implements IUserDao {
             //logger.error("can't find user by id", e);
         }
         return user;
+    }
+
+    @Override
+    public void updateUserName(String id, String name) {
+        String sql =
+                "UPDATE " +
+                "   users " +
+                "SET" +
+                "   name = " + name +
+                "WHERE" +
+                "   id = " + id;
+        jdbcTemplate.update(sql, new MapSqlParameterSource());
     }
 }

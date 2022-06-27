@@ -25,20 +25,20 @@ public interface IUserDao {
                     "	users " +
                     "	( " +
                     "		password " +
-                    "		,first_name " +
-                    "		,email " +
+                    "		,liame " +
                     "		,info " +
                     "	) " +
                     "VALUES " +
                     "	(	" +
                     "		:password " +
-                    "		,:first_name " +
-                    "		,:email " +
+                    "		,:liame " +
                     "		,:info " +
                     "	)	";
     boolean insertUser(User user);
 
-    User getUserByEmail(String email);
+    User getUserByLiame(String liame);
 
     User getUserById(long id);
+
+    void updateUserName(String id, String name);
 }
