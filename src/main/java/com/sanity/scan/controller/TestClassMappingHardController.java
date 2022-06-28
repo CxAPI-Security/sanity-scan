@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("test/class/mapping")
-public class TestClassMappingController {
+@RequestMapping("test/class/mapping/hard")
+public class TestClassMappingHardController {
 
     @GetMapping("/object/primitive")
     String primitive(@RequestParam(required=true) String path) {
