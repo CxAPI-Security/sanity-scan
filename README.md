@@ -24,15 +24,15 @@ curl --location --request GET 'http://localhost:8080/user/get/firstName/byEmail/
 
 ## Second scan
 We created branch: master-second-scan for comparison purposes
-1. delete sensitive - delete "firstName" from User class. Impact APIs
+1. delete sensitive parameter - delete "firstName" from User class. Impact APIs
    1. /user/insert
    2. /user/create/password
    3. /user/updateMe
-2. Non-sensitive - add "height" to User class. Impact APIs
+2. Non-sensitive parameter - add "height" to User class. Impact APIs
    1. /user/insert
    2. /user/create/password
    3. /user/updateMe
-3. change sensitive - rename "email" to "liame" (in User class). Impact APIs
+3. change sensitive parameter - rename "email" to "liame" (in User class). Impact APIs
    1. /user/insert
    2. /user/create/password
    3. /user/updateMe
