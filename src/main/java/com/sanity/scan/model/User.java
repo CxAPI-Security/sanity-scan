@@ -6,6 +6,7 @@ public class User {
     private String password;
     private String email;
     private String info;
+    private Address address;
 
 
     public String getInfo() {
@@ -48,6 +49,14 @@ public class User {
         this.email = email;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -56,6 +65,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", info='" + info + '\'' +
+                ", address=" + address +
                 '}';
     }
 }
