@@ -64,11 +64,12 @@ public class UserController {
         return "LioR";
     }
 
-    @RequestMapping("/user/update/name")
-    public void updateUserName(@RequestParam(value = "name", required = true) String name,
-            @RequestParam(value = "id", required = true) String id) {
-        userService.updateUserName(id, name);
-    }
+    // our scan flow fails if this method is not commented, because of the SAST bug in meta queries (AS-2065)
+//    @RequestMapping("/user/update/name")
+//    public void updateUserName(@RequestParam(value = "name", required = true) String name,
+//            @RequestParam(value = "id", required = true) String id) {
+//        userService.updateUserName(id, name);
+//    }
 
 
 }
