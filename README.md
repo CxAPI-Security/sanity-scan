@@ -20,3 +20,12 @@ curl --location --request GET 'http://localhost:8080/user/get/firstName/byEmail/
 --data-raw ''
 
 ```
+
+## Swagger UI
+
+- URI: http://localhost:8080/swagger-ui/index.html
+- path location: /src/resources/swagger/sanity-scan-swagger.json
+
+## Maintenance
+- generate a swagger file for each API change and store it under swagger path location 
+
