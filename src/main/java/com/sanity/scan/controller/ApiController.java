@@ -1,7 +1,6 @@
 package com.sanity.scan.controller;
 
-import com.sanity.scan.model.Credentials;
-import com.sanity.scan.model.UserInfo;
+import com.sanity.scan.model.*;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
@@ -101,5 +100,17 @@ public class ApiController {
             int len = Runtime.getRuntime().exec(ssn).getInputStream().read(buf);
         }
         return userInfo;
+    }
+
+    @PostMapping("/api/v1/printAddress")
+    void printAddress(@RequestBody Request<Address> request) throws IOException {
+        System.out.println("ip: " + request);
+        System.out.println("data: " + request.getData());
+    }
+
+    @PostMapping("/api/v1/printUser")
+    void printUser(@RequestBody Request<User> request) throws IOException {
+        System.out.println("ip: " + request);
+        System.out.println("data: " + request.getData());
     }
 }
