@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 public class UserController {
@@ -64,5 +65,10 @@ public class UserController {
         return "LioR";
     }
 
-
+    @PostMapping(value = "/user/create/cart")
+    public void createUserCart(@RequestBody User user, @RequestParam(required=true) Set<String> product_ids, @RequestParam(required=true) List<Integer> quantities) {
+        System.out.println("createUserCart");
+        System.out.println(user);
+        userService.createUserCart(user, product_ids, quantities);
+    }
 }

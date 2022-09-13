@@ -56,6 +56,72 @@
 				}
 			}
 		},
+		"/user/create/cart": {
+			"post": {
+				"tags": [
+					"user-controller"
+				],
+				"summary": "createUserCart",
+				"operationId": "createUserCartUsingPOST",
+				"consumes": [
+					"application/json"
+				],
+				"produces": [
+					"*/*"
+				],
+				"parameters": [
+					{
+						"name": "product_ids",
+						"in": "query",
+						"description": "product_ids",
+						"required": true,
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"collectionFormat": "multi"
+					},
+					{
+						"name": "quantities",
+						"in": "query",
+						"description": "quantities",
+						"required": true,
+						"type": "array",
+						"items": {
+							"type": "integer",
+							"format": "int32"
+						},
+						"collectionFormat": "multi"
+					},
+					{
+						"in": "body",
+						"name": "user",
+						"description": "user",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/User"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
 		"/user/create/password": {
 			"post": {
 				"tags": [
