@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Set;
+import java.util.Map;
 
 @RestController
 public class UserController {
@@ -71,4 +72,12 @@ public class UserController {
         System.out.println(user);
         userService.createUserCart(user, product_ids, quantities);
     }
+
+    @PostMapping(value = "/user/create/mapCart")
+    public void createUserMapCart(@RequestBody User user, @RequestParam(required=true) Map<String, Integer> mapCart) {
+        System.out.println("createUserMapCart");
+        System.out.println(user);
+        userService.createUserMapCart(user, mapCart);
+    }
+
 }
