@@ -16,9 +16,10 @@ public class Country implements Serializable {
     private transient String displayName;
     private volatile transient String gmtOffset;
     private GovernmentForm governmentForm;
+    private String language;
 
     public Country(int id, String countryName, String a3, String phoneCode, String displayName, String gmtOffset,
-                   GovernmentForm governmentForm) {
+                   GovernmentForm governmentForm, String language) {
         this.id = id;
         this.countryName = countryName;
         this.a3 = a3;
@@ -26,6 +27,7 @@ public class Country implements Serializable {
         this.displayName = displayName;
         this.gmtOffset = gmtOffset;
         this.governmentForm = governmentForm;
+        this.language = language;
     }
 
     public int getId() {
@@ -92,6 +94,10 @@ public class Country implements Serializable {
         this.governmentForm = governmentForm;
     }
 
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
     @Override
     public String toString() {
         return "Country{" +
@@ -103,6 +109,7 @@ public class Country implements Serializable {
                 ", displayName='" + displayName + '\'' +
                 ", gmtOffset='" + gmtOffset + '\'' +
                 ", governmentForm=" + governmentForm +
+                ", language='" + language + '\'' +
                 '}';
     }
 }
