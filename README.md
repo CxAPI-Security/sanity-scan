@@ -40,7 +40,19 @@ Response
     "phoneCode": "",
     "displayName": "",
     "gmtOffset": "",
-    "governmentForm": "DEMOCRACY"
+    "governmentForm": "DEMOCRACY",
+    "a2": null
+}
+```
+### Example 4
+Request
+```
+curl --location --request GET 'http://127.0.0.1:8080/city/get/byId/5'
+```
+Response
+```
+{
+    "name": "Tel-Aviv"
 }
 ```
 

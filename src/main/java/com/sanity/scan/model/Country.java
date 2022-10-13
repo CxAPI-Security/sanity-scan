@@ -13,7 +13,7 @@ public class Country implements Serializable {
     private static String a2;
     private String a3;
     private volatile String phoneCode;
-    private String displayName;
+    private transient String displayName;
     private volatile transient String gmtOffset;
     private GovernmentForm governmentForm;
 
@@ -44,11 +44,11 @@ public class Country implements Serializable {
         return definition;
     }
 
-    public static String getA2() {
+    public String getA2() {
         return a2;
     }
 
-    public static void setA2(String a2) {
+    public void setA2(String a2) {
         Country.a2 = a2;
     }
 
