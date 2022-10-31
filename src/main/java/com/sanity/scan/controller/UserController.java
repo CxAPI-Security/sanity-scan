@@ -1,5 +1,6 @@
 package com.sanity.scan.controller;
 
+import com.sanity.scan.model.Address;
 import com.sanity.scan.model.User;
 import com.sanity.scan.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,5 +80,15 @@ public class UserController {
         System.out.println(user);
         userService.createUserMapCart(user, mapCart);
     }
+
+   @PostMapping(value = "/user/test/MapWithSet")
+   public void testMapWithSet(@RequestBody Map<String, Set<String>> mapWithSet){
+       System.out.println(mapWithSet);
+   }
+
+   @PostMapping(value = "/user/address")
+    public void addAddress(@RequestBody Address address){
+       System.out.println(address);
+   }
 
 }
