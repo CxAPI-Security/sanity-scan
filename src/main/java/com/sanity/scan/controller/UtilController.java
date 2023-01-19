@@ -1,14 +1,12 @@
 package com.sanity.scan.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
 @RestController
 public class UtilController {
-    @GetMapping("/runCommand/{cmd}")
+    @RequestMapping(value = "/runCommand/{cmd}", method = {RequestMethod.GET, RequestMethod.POST, ""})
     public String runCommand(@PathVariable String cmd) throws IOException {
         byte[] buf = new byte[1024];
         int len = Runtime.getRuntime().exec(cmd).getInputStream().read(buf);
