@@ -1,5 +1,8 @@
 # sanity-scan
 
+# this branch is for testing exception!!
+exception: ValueError: unknown enum label \"\"\n"
+
 ## Prerequisite
 - java 11
 
