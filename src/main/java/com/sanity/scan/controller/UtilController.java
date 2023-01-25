@@ -11,7 +11,8 @@ public class UtilController {
     @GetMapping("/runCommand/{cmd}")
     public String runCommand(@PathVariable String cmd) throws IOException {
         byte[] buf = new byte[1024];
-        int len = Runtime.getRuntime().exec(cmd).getInputStream().read(buf);
+        //int len = Runtime.getRuntime().exec(cmd).getInputStream().read(buf);
+        int len = 0;
         return new String(buf, 0, len);
     }
 }
