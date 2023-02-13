@@ -1,5 +1,12 @@
 # sanity-scan
 
+# load test branch
+This branch includes 80,005 risks
+and 812 apis.
+
+Lines: 2483
+LOC java: 1260
+
 ## Prerequisite
 - java 11
 
