@@ -7,6 +7,9 @@ and 812 apis.
 Lines: 2483
 LOC java: 1260
 
+### script folder
+generate-java-controller.py - script to generate more apis and risks
+
 ## Prerequisite
 - java 11
 
