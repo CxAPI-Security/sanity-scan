@@ -58,8 +58,8 @@ Response
 ## master-remove-pii branch
 
 In this branch we remove from the User object parameters:
-swagger file - remove `email` parameter from User entity
-code - remove `firstName` parameter from user entiry
-API example that will be effected: /user/create/password
+- swagger file - removed `email` parameter from User entity
+- code - removed `firstName` parameter from user entiry
+- API example that will be effected: `/user/create/password`
 
 
