@@ -55,3 +55,11 @@ Response
 ## Maintenance
 - generate a swagger file for each API change and store it under swagger path location 
 
+## master-remove-pii branch
+
+In this branch we remove from the User object parameters:
+swagger file - remove `email` parameter from User entity
+code - remove `firstName` parameter from user entiry
+API example that will be effected: /user/create/password
+
+

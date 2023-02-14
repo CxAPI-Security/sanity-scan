@@ -22,7 +22,6 @@ public class UserDao implements IUserDao {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         SqlParameterSource namedParameters = new MapSqlParameterSource
                 ("password", user.getPassword())
-                .addValue("first_name", user.getFirstName())
                 .addValue("email", user.getEmail())
                 .addValue("info", user.getInfo());
         int update = jdbcTemplate.update(INSERT_USER, namedParameters, keyHolder, new String[]{"id"});

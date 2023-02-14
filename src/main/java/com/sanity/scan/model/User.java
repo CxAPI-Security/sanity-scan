@@ -2,7 +2,6 @@ package com.sanity.scan.model;
 
 public class User {
     private Long id;
-    private String firstName;
     private String password;
     private String email;
     private String info;
@@ -22,14 +21,6 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
 
     public String getPassword() {
@@ -52,7 +43,6 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", info='" + info + '\'' +
