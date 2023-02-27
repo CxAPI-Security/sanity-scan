@@ -42,3 +42,12 @@ We created branch: master-second-scan for comparison purposes
    1. /user/update/name
 6. change path - from /user/update to /user/updateMe 
 7. delete API - delete users/findAll
+
+## Swagger UI
+
+- URI: http://localhost:8080/swagger-ui/index.html
+- path location: /src/resources/swagger/sanity-scan-swagger.json
+
+## Maintenance
+- generate a swagger file for each API change and store it under swagger path location 
+
