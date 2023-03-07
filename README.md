@@ -56,12 +56,64 @@ Response
 ```
 
 
-
-## Swagger UI
+## we have 2 option to generate openapi/swagger file
+### first option Swagger UI
 
 - URI: http://localhost:8080/swagger-ui/index.html
-- path location: /src/resources/swagger/sanity-scan-swagger.json
+- we can change swagger/openapi version in src/main/java/com/sanity/scan/config/SwaggerConfig.java -> DocumentationType
+- option: swagger 1.2 / swagger 2.0 / openapi 3.0
+
+### second option openapi
+- URI: http://localhost:8080/v3/api-docs/
+- support: openapi 3.0.1
+- to enable this option need to remove the src/main/java/com/sanity/scan/config/SwaggerConfig.java
+- and update the pom.xml
+form
+```xml
+<!-- swagger/openapi files -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
+<!--		<dependency>-->
+<!--			<groupId>org.springdoc</groupId>-->
+<!--			<artifactId>springdoc-openapi-ui</artifactId>-->
+<!--			<version>1.6.14</version>-->
+<!--		</dependency>-->
+```
+to
+```xml
+<!-- swagger/openapi files -->
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger-ui</artifactId>-->
+<!--			<version>3.0.0</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-boot-starter</artifactId>-->
+<!--			<version>3.0.0</version>-->
+<!--		</dependency>-->
+
+		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.14</version>
+		</dependency>
+```
 
 ## Maintenance
-- generate a swagger file for each API change and store it under swagger path location 
+- generate a swagger file for each API change and store it under /src/resources/swagger/
+
+
+
 
