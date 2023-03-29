@@ -6,6 +6,7 @@ public class User {
     private String password;
     private String email;
     private String info;
+    private String mobile;
 
 
     public String getInfo() {
@@ -48,6 +49,14 @@ public class User {
         this.email = email;
     }
 
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -56,6 +65,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", info='" + info + '\'' +
+                ", mobile='" + mobile + '\'' +
                 '}';
     }
 }
