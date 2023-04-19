@@ -20,3 +20,9 @@ curl --location --request GET 'http://localhost:8080/user/get/firstName/byEmail/
 --data-raw ''
 
 ```
+
+# Fix risk
+- Privacy Violation
+- API: /user/create/password
+- Fix risk by deleting the method
+- @PostMapping("/user/create/password") User createUserVar(@RequestBody User user, @RequestParam(required=true) String password)
