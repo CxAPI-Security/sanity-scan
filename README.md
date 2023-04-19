@@ -55,3 +55,8 @@ Response
 ## Maintenance
 - generate a swagger file for each API change and store it under swagger path location 
 
+# Fix Swagger risk
+- API: "/users/findAll"
+- Fix risk name: Response Code Missing (v2)
+- actual value: 500 response is undefined
+- expected value: 500 response should be set
