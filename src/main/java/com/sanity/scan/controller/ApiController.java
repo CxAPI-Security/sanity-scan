@@ -47,25 +47,24 @@ public class ApiController {
     }
 
     public ApiController(RequestMappingHandlerMapping requestMappingHandlerMapping) {
-        //TODO uncomment when sast support requestMappingHandlerMapping.registerMapping
-//        RequestMappingInfo.BuilderConfiguration options = new RequestMappingInfo.BuilderConfiguration();
-//        options.setPatternParser(new PathPatternParser());
-//
-//        RequestMappingInfo mappingInfo = RequestMappingInfo
-//                .paths("/api/v1/sign-up")
-//                .methods(RequestMethod.POST)
-//                .consumes(MediaType.APPLICATION_JSON_VALUE)
-////				.produces(MediaType.APPLICATION_JSON_VALUE)
-//                .options(options)  //This is Builder config
-//                .build();
-//
-//        Method Method = null;
-//        try {
-//            Method = ApiController.class.getMethod("signUp", Credentials.class);
-//            requestMappingHandlerMapping.registerMapping(mappingInfo, this, Method);
-//        } catch (NoSuchMethodException e) {
-//            throw new RuntimeException(e);
-//        }
+       RequestMappingInfo.BuilderConfiguration options = new RequestMappingInfo.BuilderConfiguration();
+       options.setPatternParser(new PathPatternParser());
+
+       RequestMappingInfo mappingInfo = RequestMappingInfo
+               .paths("/api/v1/sign-up")
+               .methods(RequestMethod.POST)
+               .consumes(MediaType.APPLICATION_JSON_VALUE)
+//				.produces(MediaType.APPLICATION_JSON_VALUE)
+               .options(options)  //This is Builder config
+               .build();
+
+       Method Method = null;
+       try {
+           Method = ApiController.class.getMethod("signUp", Credentials.class);
+           requestMappingHandlerMapping.registerMapping(mappingInfo, this, Method);
+       } catch (NoSuchMethodException e) {
+           throw new RuntimeException(e);
+       }
     }
 
     @GetMapping("/api/v1/get-current-time/{timeZone}")
