@@ -80,4 +80,10 @@ public class UserController {
         userService.createUserMapCart(user, mapCart);
     }
 
+    @GetMapping(value = {"/findAllUsers1", "/findAllUsers2"})
+    List<User> findUsers() {
+        System.out.println("findAllUsers");
+        return null;
+    }
+
 }
