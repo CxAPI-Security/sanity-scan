@@ -2,6 +2,7 @@
 
 ## Prerequisite
 - java 11
+- Maven
 
 ## Usage
 ### Example 1
@@ -54,4 +55,3 @@ Response
 
 ## Maintenance
 - generate a swagger file for each API change and store it under swagger path location 
-
