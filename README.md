@@ -1,6 +1,6 @@
 # sanity-scan
 
-## Prerequisite
+## Prerequisites
 - java 11
 - Maven
 
