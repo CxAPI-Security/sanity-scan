@@ -46,7 +46,7 @@
 					"200": {
 						"description": "OK",
 						"schema": {
-							"$ref": "#/definitions/Country"
+							"$ref": "../definitions/definitions.json#/Country"
 						}
 					},
 					"401": {
@@ -191,7 +191,7 @@
 						"description": "user",
 						"required": true,
 						"schema": {
-							"$ref": "#/definitions/User"
+							"$ref": "../definitions/definitions.json#/User"
 						}
 					}
 				],
@@ -246,7 +246,7 @@
 						"description": "user",
 						"required": true,
 						"schema": {
-							"$ref": "#/definitions/User"
+							"$ref": "../definitions/definitions.json#/User"
 						}
 					}
 				],
@@ -296,7 +296,7 @@
 						"description": "user",
 						"required": true,
 						"schema": {
-							"$ref": "#/definitions/User"
+							"$ref": "../definitions/definitions.json#/User"
 						}
 					}
 				],
@@ -304,7 +304,7 @@
 					"200": {
 						"description": "OK",
 						"schema": {
-							"$ref": "#/definitions/User"
+							"$ref": "../definitions/definitions.json#/User"
 						}
 					},
 					"201": {
@@ -345,7 +345,7 @@
 					"200": {
 						"description": "OK",
 						"schema": {
-							"$ref": "#/definitions/User"
+							"$ref": "../definitions/definitions.json#/User"
 						}
 					},
 					"401": {
@@ -384,7 +384,7 @@
 					"200": {
 						"description": "OK",
 						"schema": {
-							"$ref": "#/definitions/User"
+							"$ref": "../definitions/definitions.json#/User"
 						}
 					},
 					"401": {
@@ -457,7 +457,7 @@
 						"description": "user",
 						"required": true,
 						"schema": {
-							"$ref": "#/definitions/User"
+							"$ref": "../definitions/definitions.json#/User"
 						}
 					}
 				],
@@ -465,7 +465,7 @@
 					"200": {
 						"description": "OK",
 						"schema": {
-							"$ref": "#/definitions/User"
+							"$ref": "../definitions/definitions.json#/User"
 						}
 					},
 					"201": {
@@ -503,7 +503,7 @@
 						"description": "user",
 						"required": true,
 						"schema": {
-							"$ref": "#/definitions/User"
+							"$ref": "../definitions/definitions.json#/User"
 						}
 					}
 				],
@@ -542,7 +542,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/User"
+								"$ref": "../definitions/definitions.json#/User"
 							}
 						}
 					},
@@ -557,74 +557,6 @@
 					}
 				}
 			}
-		}
-	},
-	"definitions": {
-		"Country": {
-			"type": "object",
-			"properties": {
-				"a2": {
-					"type": "string"
-				},
-				"a3": {
-					"type": "string"
-				},
-				"countryName": {
-					"type": "string"
-				},
-				"definition": {
-					"type": "string"
-				},
-				"displayName": {
-					"type": "string"
-				},
-				"gmtOffset": {
-					"type": "string"
-				},
-				"governmentForm": {
-					"type": "string",
-					"enum": [
-						"ARISTOCRACY",
-						"DEMOCRACY",
-						"MONARCHY",
-						"OLIGARCHY",
-						"OTHER",
-						"THEOCRACY",
-						"TIMOCRACY",
-						"TYRANNY"
-					]
-				},
-				"id": {
-					"type": "integer",
-					"format": "int32"
-				},
-				"phoneCode": {
-					"type": "string"
-				}
-			},
-			"title": "Country"
-		},
-		"User": {
-			"type": "object",
-			"properties": {
-				"email": {
-					"type": "string"
-				},
-				"firstName": {
-					"type": "string"
-				},
-				"id": {
-					"type": "integer",
-					"format": "int64"
-				},
-				"info": {
-					"type": "string"
-				},
-				"password": {
-					"type": "string"
-				}
-			},
-			"title": "User"
 		}
 	}
 }
