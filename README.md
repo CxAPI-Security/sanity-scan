@@ -55,3 +55,7 @@ Response
 ## Maintenance
 - generate a swagger file for each API change and store it under swagger path location 
 
+## Branch features - remove-api
+- removed from both code and doc: `GET /user/get/byId/{id}`
+- removed from doc: `GET /runCommand/{cmd}`
+- removed from code: `POST /user/create/password`
