@@ -21,6 +21,14 @@ public class CountryController {
         return countryService.getCountryById(id);
     }
 
+    @GetMapping(value = "/country/get/byId/{id}")
+    public Country getCountryById(@PathVariable("id") String id2) {
+        System.out.println("getCountryById");
+        System.out.println(id2);
+        return new Country(1, "Israel", "", "", "",
+                "", null, "");
+    }
+
     @GetMapping(value = "/country/get/governmentForm/{id}")
     public GovernmentForm getGovernmentFormById(@PathVariable("id") int id) {
         return countryService.getGovernmentForms(id);
