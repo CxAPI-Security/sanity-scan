@@ -1,8 +1,6 @@
 package com.sanity.scan.service;
 
 import com.sanity.scan.model.User;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Map;
@@ -21,4 +19,5 @@ public interface IUserService {
 
     void createUserMapCart(User user, Map<String, Integer> mapCart);
 
+    List<User> findAllUsers();
 }

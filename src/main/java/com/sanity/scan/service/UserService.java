@@ -44,4 +44,9 @@ public class UserService implements IUserService {
         //TODO implement
     }
 
+    @Override
+    public List<User> findAllUsers() {
+        return userDao.findAllUsers();
+    }
+
 }

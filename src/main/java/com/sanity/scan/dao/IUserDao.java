@@ -2,6 +2,8 @@ package com.sanity.scan.dao;
 
 import com.sanity.scan.model.User;
 
+import java.util.List;
+
 public interface IUserDao {
 
     public static final String GET_USER_BY_EMAIL =
@@ -36,9 +38,18 @@ public interface IUserDao {
                     "		,:email " +
                     "		,:info " +
                     "	)	";
+
+    public static final String FIND_ALL_USERS =
+            " SELECT " +
+            "	u.* " +
+            " FROM " +
+            "	users u ";
+
     boolean insertUser(User user);
 
     User getUserByEmail(String email);
 
     User getUserById(long id);
+
+    List<User> findAllUsers();
 }
