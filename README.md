@@ -54,4 +54,3 @@ Response
 
 ## Maintenance
 - generate a swagger file for each API change and store it under swagger path location 
-
